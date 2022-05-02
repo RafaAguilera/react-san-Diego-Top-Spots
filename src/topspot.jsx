@@ -1,16 +1,20 @@
 import React from 'react';
-// import img from './images/1.jpg'
-export default props => (
+// import img from "./images/"
+// let images =require("./images/1.jpg");
 
-  <div className="card col-6 m-2" style={{width: "40rem"}}>
-  <div className="flex-column-reverse col-12 ps-3 pe-3 mt-3 mb-3 text-end">
-      <h4 className="card-title text-wrap">{props.name}</h4>
-      <p className="card-body text-wrap" >{props.description}</p>
-      <a className="btn btn-success" href={`https://maps.google.com/?q=${props.location[0]},${props.location[1]}`} role="button">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" className="bi bi-map" viewBox="0 0 16 16">
-      <path fillRule="evenodd" d="M15.817.113A.5.5 0 0 1 16 .5v14a.5.5 0 0 1-.402.49l-5 1a.502.502 0 0 1-.196 0L5.5 15.01l-4.902.98A.5.5 0 0 1 0 15.5v-14a.5.5 0 0 1 .402-.49l5-1a.5.5 0 0 1 .196 0L10.5.99l4.902-.98a.5.5 0 0 1 .415.103zM10 1.91l-4-.8v12.98l4 .8V1.91zm1 12.98 4-.8V1.11l-4 .8v12.98zm-6-.8V1.11l-4 .8v12.98l4-.8z"/>
-    </svg>  MAP</a>
+export default props => (
+  <div className="card-group">
+<div className="card bg-dark text-white m-2 rounded text-end">
+  <img src={`./images/${props.id}.png`} className="card-img" alt="..."/>
+  <div className="card-img-overlay ps-2">
+    <h4 className="card-title display-6 ps-3 text-wrap text-end"><strong><em>{props.name}</em></strong></h4>
+    <p className="card-text ms-5 ps-5 text-wrap text-end fs-6"><em>{props.description}</em></p>
+    <a className="btn btn-danger justify-end" href={`https://maps.google.com/?q=${props.location[0]},${props.location[1]}`} role="button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+  <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+</svg> MAP</a>
   </div>
+</div>
 </div> 
 );
 
